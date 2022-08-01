@@ -2,33 +2,66 @@
  * @Author: boxZhang
  * @Date: 2022-07-27 15:20:25
  * @LastEditors: boxZhang
- * @LastEditTime: 2022-07-27 16:52:57
+ * @LastEditTime: 2022-07-29 16:14:07
  * @Description: 好好做人，谨慎敲码
- * @FilePath: \workspace\test-boxZ\vue-test.html
+ * @FilePath: \workspace\test-boxZ\my-test\vue-test.html
 -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 开发环境版本，包含了有帮助的命令行警告 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>test</title>
-</head>
+  </head>
 
+  <body>
+    <div id="app" v-once>
+      {{ message }}{{name}}{{b}}
+      <p v-html="eleHtml"></p>
+      <div v-bind:class="color">动态绑定</div>
+      <div v-bind:class="blue">动态绑定</div>
+      <button v-bind:disabled="isButtonDisabled">Button</button>
+      {{ judgeOK ? judge1 : 'NO' }}
+    </div>
+
+<<<<<<< HEAD
 <body>
     <div id="app">{{ message }}{{}}</div>
+=======
+>>>>>>> 8cae307bb4e0444b08c84ef52aabb9682387ed49
     <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                message: 'Hello Vue!',
-                name: 'vue'
-            }
-        })
+      var data = {}
+      var app = new Vue({
+        el: '#app',
+        data: {
+          color: 'red',
+          blue: 'blue',
+          isButtonDisabled: 'undefined',
+          judgeOK: 'hello',
+          judge1: 'yesdd',
+          message: 'Hello Vue!',
+          name: 'vue1',
+          b: '',
+          eleHtml: '<span class="aaa">html标签</span>',
+        },
+      })
+      // app.$data.b = '22'
+      app.$watch('name', function (newVal, oldVal) {
+        console.log(newVal, oldVal)
+      })
+      app.$data.name = 'test__'
     </script>
-</body>
-
+    <style>
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+        font-size: 30px;
+      }
+    </style>
+  </body>
 </html>
