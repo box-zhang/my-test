@@ -2,7 +2,7 @@
  * @Author: boxZhang
  * @Date: 2022-07-27 15:20:25
  * @LastEditors: boxZhang
- * @LastEditTime: 2022-07-29 16:14:07
+ * @LastEditTime: 2022-08-01 16:53:49
  * @Description: 好好做人，谨慎敲码
  * @FilePath: \workspace\test-boxZ\my-test\vue-test.html
 -->
@@ -25,11 +25,16 @@
       <div v-bind:class="blue">动态绑定</div>
       <button v-bind:disabled="isButtonDisabled">Button</button>
       {{ judgeOK ? judge1 : 'NO' }}
+      <ul>
+        <li v-for="item,value,key in items" :key="key">
+          {{key}}. {{value}}:{{item}}
+        </li>
+      </ul>
     </div>
 
     <script>
       var data = {}
-      var app = new Vue({
+      var vm = new Vue({
         el: '#app',
         data: {
           color: 'red',
@@ -41,6 +46,11 @@
           name: 'vue1',
           b: '',
           eleHtml: '<span class="aaa">html标签</span>',
+          items: {
+            title: '我的vue',
+            name: '名字',
+            content: '内容',
+          },
         },
       })
       // app.$data.b = '22'
