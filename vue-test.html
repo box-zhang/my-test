@@ -2,7 +2,7 @@
  * @Author: boxZhang
  * @Date: 2022-07-27 15:20:25
  * @LastEditors: boxZhang
- * @LastEditTime: 2022-08-02 15:01:40
+ * @LastEditTime: 2022-08-02 16:55:05
  * @Description: 好好做人，谨慎敲码
  * @FilePath: \workspace\test-boxZ\my-test\vue-test.html
 -->
@@ -18,46 +18,31 @@
   </head>
 
   <body>
-    <div id="app" v-once>
-      {{ message }}{{name}}{{b}}
-      <p v-html="eleHtml"></p>
-      <div v-bind:class="color">动态绑定</div>
-      <div v-bind:class="blue">动态绑定</div>
-      <button v-bind:disabled="isButtonDisabled">Button</button>
-      {{ judgeOK ? judge1 : 'NO' }}
-      <ul>
-        <li v-for="item,value,key in items" :key="key">
-          {{key}}. {{value}}:{{item}}
-        </li>
-      </ul>
+    <div id="app">
+      {{msg}}
+      <input type="text" v-model="mobile" />
+      {{mobile}}
     </div>
 
     <script>
       var data = {}
       var vm = new Vue({
         el: '#app',
-        data: {
-          color: 'red',
-          blue: 'blue',
-          isButtonDisabled: 'undefined',
-          judgeOK: 'hello',
-          judge1: 'yesdd',
-          message: 'Hello Vue!',
-          name: 'vue1',
-          b: '',
-          eleHtml: '<span class="aaa">html标签</span>',
-          items: {
-            title: '我的vue',
-            name: '名字',
-            content: '内容',
-          },
+        data() {
+          return {
+            msg: 'hello vue',
+            people: {
+              name: 'zhangs',
+              age: '22',
+              height: '164',
+              address: '北京房山',
+            },
+            mobile: '1881118888',
+          }
         },
       })
-      // app.$data.b = '22'
-      app.$watch('name', function (newVal, oldVal) {
-        console.log(newVal, oldVal)
-      })
-      app.$data.name = 'test__'
+
+      console.log(vm)
     </script>
     <style>
       .red {
