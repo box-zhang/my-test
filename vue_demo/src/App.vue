@@ -2,7 +2,7 @@
  * @Author: boxZhang
  * @Date: 2022-08-08 10:15:42
  * @LastEditors: boxZhang
- * @LastEditTime: 2022-08-08 15:11:31
+ * @LastEditTime: 2022-08-09 17:06:28
  * @Description: 好好做人，谨慎敲码
  * @FilePath: \workspace\test-boxZ\my-test\vue_demo\src\App.vue
 -->
@@ -13,17 +13,23 @@
     <login></login>
 
     <hello-come></hello-come>
+    <hr />
+    <hr />
+
+    <father />
   </div>
 </template>
 
 <script>
+import father from "./components/father";
 import Hello from "./components/Hello.vue";
 import Login from "./components/Login";
 export default {
   name: "App",
   components: {
     login: Login,
-    helloCome: Hello
+    helloCome: Hello,
+    father
   }
 };
 // 组件的创建
