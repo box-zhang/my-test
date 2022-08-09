@@ -9,10 +9,9 @@
 <template>
   <div>
     <h3>fater.vue</h3>
-    <sonVue></sonVue>
-    {{ title1 }}
-    <hr />
-    {{ movie2 }}
+    <p >在父组件中使用子组建的数据：{{title1}}</p>
+    <hr>
+    <sonVue :titleMsg = "title1" @send1="resive"></sonVue>
   </div>
 </template>
 
@@ -22,13 +21,22 @@ export default {
   name: "FatherDemo",
   data() {
     return {
-      title1: "我是father组件",
-      movie2: "father的电影"
+      title1: "我是father组件的title",
+      movie2: "father的电影",
+      tt:""
     };
   },
   components: {
     sonVue
-  }
+  },
+  methods: {
+    resive(params){
+      console.log(params)
+      this.title1=params
+    }
+  },
+
+  // props: [sonTxt]
 };
 </script>
 

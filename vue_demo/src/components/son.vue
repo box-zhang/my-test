@@ -10,26 +10,37 @@
   <div>
     <h3>son.vue</h3>
 
-    <fatherDemo></fatherDemo>
-    {{ title1 }}
-    <hr />
-    {{ movie1 }}
+    <!-- <fatherDemo></fatherDemo> -->
+    <p> {{ titleMsg }}</p>
+   
+    <p><button @click="showInfo">子-->父传递数据</button></p>
+   
   </div>
 </template>
 
 <script>
-import fatherDemo from "./father.vue";
+// import fatherDemo from "./father.vue";
 export default {
   name: "sonDemo",
   data() {
     return {
       title1: "我是son组件的title",
-      movie1: "蝙蝠侠son"
+      movie1: "蝙蝠侠son",
+      tt:"儿子值"
     };
   },
   components: {
-    fatherDemo
-  }
+    // fatherDemo
+  },
+  props: [
+    "titleMsg"
+  ],
+  methods: {
+    showInfo(){
+      this.$emit("send1",this.title1)
+      console.log("我是子组件内容");
+    }
+  },
 };
 </script>
 
