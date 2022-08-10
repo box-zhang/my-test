@@ -2,7 +2,7 @@
  * @Author: boxZhang
  * @Date: 2022-08-08 10:15:42
  * @LastEditors: boxZhang
- * @LastEditTime: 2022-08-09 17:06:28
+ * @LastEditTime: 2022-08-10 15:25:34
  * @Description: 好好做人，谨慎敲码
  * @FilePath: \workspace\test-boxZ\my-test\vue_demo\src\App.vue
 -->
@@ -13,10 +13,8 @@
     <login></login>
 
     <hello-come></hello-come>
-    <hr />
-    <hr />
 
-    <father />
+    <father></father>
   </div>
 </template>
 
