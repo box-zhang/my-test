@@ -8,6 +8,7 @@
 -->
 <template>
   <div id="app">
+    <Home></Home>
     <!-- <img src="./assets/logo.png" /> -->
     <!-- <router-view /> -->
     <!-- <login></login>
@@ -20,14 +21,17 @@
 // import father from "./components/father";
 // import Hello from "./components/Hello.vue";
 // import Login from "./components/Login";
+import Home from './components/home'
+
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    login: Login,
-    helloCome: Hello,
-    father
+    Home
+    // login: Login,
+    // helloCome: Hello,
+    // father
   }
-};
+}
 // 组件的创建
 // 1. 创建一个.vue后缀的一个文件
 // 2.导入组件：import自定义组建的名字 from ‘组建的路径’
