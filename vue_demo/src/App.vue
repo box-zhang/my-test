@@ -10,18 +10,16 @@
   <div id="app">
     <!-- <img src="./assets/logo.png" /> -->
     <!-- <router-view /> -->
-    <login></login>
-
+    <!-- <login></login>
     <hello-come></hello-come>
-
-    <father></father>
+    <father></father> -->
   </div>
 </template>
 
 <script>
-import father from "./components/father";
-import Hello from "./components/Hello.vue";
-import Login from "./components/Login";
+// import father from "./components/father";
+// import Hello from "./components/Hello.vue";
+// import Login from "./components/Login";
 export default {
   name: "App",
   components: {
