@@ -13,19 +13,40 @@
 </template>
 
 <script>
-import Mock from "mockjs";
+import Mock from 'mockjs'
 export default {
-  data() {
-    return {};
+  data () {
+    return {}
   },
-  mounted() {
-    var Random = Mock.Random;
+  methods: {
+    init () {
+      const arr = Mock.mock({
+        'movieList|1-5': [
+          {
+            // id: '@id()',
+            id: '@increment',
+            title: '@ctitle()',
+            longTime: '@natural(60,180)',
+            price: '@flot(15,200,0,2)',
+            update: "@date('yyy-mm-dd')",
+            small: '@dataImage(300*150,电影图片)'
+
+          }
+        ]
+      })
+      console.log(arr)
+    }
+  },
+  mounted () {
+    var Random = Mock.Random
     // 模拟时间
-    console.log(Random.datetime("yyy-MM-dd A HH:mm:ss"));
+    console.log(Random.datetime('yyyy-MM-dd A HH:mm:ss'))
     // 模拟一个图片
-    console.log(Random.dataImage("200x100", "随即图片"));
+    console.log(Random.dataImage('200x100', '随即图片'))
+
+    this.init()
   }
-};
+}
 </script>
 
 <style></style>
