@@ -2,13 +2,14 @@
  * @Author: boxZhang
  * @Date: 2022-08-08 10:15:42
  * @LastEditors: boxZhang
- * @LastEditTime: 2022-08-10 15:25:34
+ * @LastEditTime: 2022-08-11 15:41:19
  * @Description: 好好做人，谨慎敲码
  * @FilePath: \workspace\test-boxZ\my-test\vue_demo\src\App.vue
 -->
 <template>
   <div id="app">
     <Home></Home>
+    <mockRandom></mockRandom>
     <!-- <img src="./assets/logo.png" /> -->
     <!-- <router-view /> -->
     <!-- <login></login>
@@ -21,17 +22,19 @@
 // import father from "./components/father";
 // import Hello from "./components/Hello.vue";
 // import Login from "./components/Login";
-import Home from './components/home'
+import Home from "./components/home";
+import mockRandom from "./components/mockRandom.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Home
+    Home,
+    mockRandom
     // login: Login,
     // helloCome: Hello,
     // father
   }
-}
+};
 // 组件的创建
 // 1. 创建一个.vue后缀的一个文件
 // 2.导入组件：import自定义组建的名字 from ‘组建的路径’

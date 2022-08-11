@@ -1,3 +1,11 @@
+/*
+ * @Author: boxZhang
+ * @Date: 2022-08-08 10:15:42
+ * @LastEditors: boxZhang
+ * @LastEditTime: 2022-08-11 17:02:59
+ * @Description: 好好做人，谨慎敲码
+ * @FilePath: \workspace\test-boxZ\my-test\vue_demo\.eslintrc.js
+ */
 // https://eslint.org/docs/user-guide/configuring
 
 module.exports = {
@@ -11,7 +19,7 @@ module.exports = {
   extends: [
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
     // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/essential', 
+    'plugin:vue/essential',
     // https://github.com/standard/standard/blob/master/docs/RULES-en.md
     'standard'
   ],
@@ -25,5 +33,8 @@ module.exports = {
     'generator-star-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+  },
+  "globals": {
+    "Aliplayer": true
   }
 }
