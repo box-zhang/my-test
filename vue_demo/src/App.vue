@@ -2,13 +2,13 @@
  * @Author: boxZhang
  * @Date: 2022-08-08 10:15:42
  * @LastEditors: boxZhang
- * @LastEditTime: 2022-08-11 15:41:19
+ * @LastEditTime: 2022-08-12 10:45:51
  * @Description: 好好做人，谨慎敲码
  * @FilePath: \workspace\test-boxZ\my-test\vue_demo\src\App.vue
 -->
 <template>
   <div id="app">
-    <Home></Home>
+    <!-- <Home></Home> -->
     <mockRandom></mockRandom>
     <!-- <img src="./assets/logo.png" /> -->
     <!-- <router-view /> -->
