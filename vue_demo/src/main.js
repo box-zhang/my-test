@@ -7,16 +7,16 @@
  * @FilePath: \workspace\test-boxZ\my-test\vue_demo\src\main.js
  */
 import Vue from 'vue'
-import App from './App'
+import App from './App.vue'
 import router from './router'
 
 Vue.config.productionTip = false
 
 Vue.prototype.$bus = new Vue()
-// Vue.prototype.$bus = 'hello world'
-/* eslint-disable no-new */
+    // Vue.prototype.$bus = 'hello world'
+    /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  render: h => h(App)
+    el: '#app',
+    router,
+    render: h => h(App)
 })

@@ -9,32 +9,60 @@
 <template>
   <div id="app">
     <!-- <Home></Home> -->
-    <mockRandom></mockRandom>
+    <!-- <mockRandom></mockRandom> -->
     <!-- <img src="./assets/logo.png" /> -->
     <!-- <router-view /> -->
     <!-- <login></login>
-    <hello-come></hello-come>
-    <father></father> -->
+    <hello-come></hello-come> -->
+    <!-- <father></father> -->
+    <!-- 挂载动态组件 -->
+    <!-- <p>
+      <button @click="current='Father'" :class="current =='Father'?'active':''">father</button> |
+      <button @click="current='helloCome'" :class="current =='helloCome'?'active':''">hello</button> |
+      <button @click="current='login'" :class="current =='login'?'active':''">login</button> |
+      <button @click="current='Home'" :class="current =='Home'?'active':''">home</button> |
+      <button @click="current='mockRandom'" :class="current =='mockRandom'?'active':''">mockRandom</button>
+      <button @click="current='router'" :class="current =='router'?'active':''">router</button>
+      <button @click="current='about'" :class="current =='about'?'active':''">about</button>
+    </p>
+    <keep-alive>
+      <component :is="current"></component>
+    </keep-alive> -->
+
+    <!-- 将来组件显示的地方，router-view -->
+    <router-link to="/">helloWorld</router-link> |
+    <router-link to="/routerFile">router file</router-link> |
+    <router-link to="/about">about页</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-// import father from "./components/father";
-// import Hello from "./components/Hello.vue";
-// import Login from "./components/Login";
-import Home from "./components/home";
-import mockRandom from "./components/mockRandom.vue";
+// import Father from './components/father'
+// import Hello from './components/Hello.vue'
+// import Login from './components/Login'
+// import Home from './components/home'
+// import MockRandom from './components/mockRandom.vue'
+// import Router from './components/router.vue'
+// import About from './components/about.vue'
 
 export default {
-  name: "App",
-  components: {
-    Home,
-    mockRandom
-    // login: Login,
-    // helloCome: Hello,
-    // father
+  name: 'App',
+  // components: {
+  //   Home,
+  //   MockRandom,
+  //   login: Login,
+  //   helloCome: Hello,
+  //   Father,
+  //   Router,
+  //   About
+  // },
+  data () {
+    return {
+      current: 'router'
+    }
   }
-};
+}
 // 组件的创建
 // 1. 创建一个.vue后缀的一个文件
 // 2.导入组件：import自定义组建的名字 from ‘组建的路径’
@@ -52,4 +80,9 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.active,
+.router-link-exact-active{
+  color:red;
+}
+
 </style>

@@ -8,51 +8,69 @@
 -->
 <template>
   <div>
-    <h3>我是fater.vue start</h3>
-    <p>在父组件中使用子组建的数据：{{ title1 }}</p>
-    <sonVue :titleMsg="title1" @send1="resive"></sonVue>
-    <p>接收兄弟组件login.vue传来的值：{{ getMsg }}</p>
-    <h3>我是fater.vue end</h3>
+    <!-- <h3>我是fater.vue start</h3> -->
+    <!-- <p>在父组件中使用子组建的数据：{{ title1 }}</p> -->
+    <sonVue :titleMsg="title1" @send1="resive">
+      <template v-slot:title>
+        <div>
+          我是具名插槽1
+        </div>
+      </template>
+      <p>默认插槽内容</p>
+      <template v-slot:price>
+        <div>
+          我是具名插槽2
+        </div>
+      </template>
+      <template v-slot:students="studentMsg">
+        <p>作用域插槽：</p>
+        <div>
+          我是一位学生{{studentMsg.student.a}}
+        </div>
+      </template>
+    </sonVue>
+    <!-- <p>接收兄弟组件login.vue传来的值：{{ getMsg }}</p> -->
+    <!-- <h3>我是fater.vue end</h3> -->
     <hr />
   </div>
 </template>
 
 <script>
-import sonVue from "./son.vue";
+import sonVue from './son.vue'
 export default {
-  name: "FatherDemo",
-  data() {
+  name: 'FatherDemo',
+  data () {
     return {
-      title1: "我是father组件的title",
-      movie2: "father的电影",
-      getMsg: ""
-    };
+      title1: '我是father组件的title',
+      movie2: 'father的电影',
+      getMsg: ''
+    }
   },
   components: {
     sonVue
   },
   methods: {
-    resive(params) {
-      console.log(params);
-      this.title1 = params;
+    resive (params) {
+      console.log(params)
+      this.title1 = params
     }
   },
-  mounted() {
-    console.log(this.$bus);
+  mounted () {
+    console.log(this.$bus)
     // var _this = this;
     // this.$bus.$on("sendGift", function(msg) {
     //   console.log(msg);
     //   _this.getMsg = msg;
     // });
 
-    this.$bus.$on("sendGift", msg => {
-      console.log(msg);
-      this.getMsg = msg;
-    });
+    this.$bus.$on('sendGift', msg => {
+      console.log(msg)
+      this.getMsg = msg
+    })
   }
 
   // props: [sonTxt]
-};
+}
 </script>
 
 <style></style>
