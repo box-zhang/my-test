@@ -1,30 +1,46 @@
+/*
+ * @Author: boxZhang
+ * @Date: 2022-08-15 10:09:20
+ * @LastEditors: boxZhang
+ * @LastEditTime: 2022-08-15 17:00:43
+ * @Description: 好好做人，谨慎敲码
+ * @FilePath: \workspace\test-boxZ\my-test\vue_demo\src\router\index.js
+ */
 // 在index.js中，先下载引入文件
-import Vue from 'vue'
-import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import RouterFile from '@/components/router'
-import About from '@/components/about'
+import Vue from 'vue'
+import Router from 'vue-router'
 
 // 全局安装router，使用Vue.use(Router)
 Vue.use(Router)
 
 const routes = [{
-    path: '/',
-    // redirect: 路由重定向
-    redirect: '/helloWorld'
+  path: '/',
+  // redirect: 路由重定向
+  redirect: '/helloWorld'
 }, {
-    path: '/helloWorld',
-    name: 'helloWorld',
-    component: HelloWorld
+  path: '/helloWorld', // params传参  /:参数
+  name: 'helloWorld',
+  component: HelloWorld
 }, {
-    path: '/routerFile',
-    name: 'routerFile',
-    component: RouterFile
+  path: '/routerFile',
+  name: 'routerFile',
+  component: RouterFile
 }, {
-    path: '/about',
-    name: 'about',
-    component: About
+  // path: '/aboutView/:id',
+  path: '/aboutView/:id/:name',
+  name: 'aboutView',
+  component: () => import('@/views/AboutView.vue')
+}, {
+  path: '/homeView',
+  name: 'homeView',
+  component: () => import('@/views/HomeView.vue')
+}, {
+  path: '/query',
+  name: 'query',
+  component: () => import('@/views/query.vue')
 }]
 export default new Router({
-    routes: routes
+  routes: routes
 })

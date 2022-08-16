@@ -2,7 +2,7 @@
  * @Author: boxZhang
  * @Date: 2022-08-08 10:15:42
  * @LastEditors: boxZhang
- * @LastEditTime: 2022-08-12 10:45:51
+ * @LastEditTime: 2022-08-15 17:03:38
  * @Description: 好好做人，谨慎敲码
  * @FilePath: \workspace\test-boxZ\my-test\vue_demo\src\App.vue
 -->
@@ -33,6 +33,10 @@
     <router-link to="/">helloWorld</router-link> |
     <router-link to="/routerFile">router file</router-link> |
     <router-link to="/about">about页</router-link>
+    <hr />
+    <router-link to="/aboutView">aboutView</router-link> |
+    <router-link to="/homeView">homeView</router-link> |
+    <router-link to="/query">query</router-link>
     <router-view></router-view>
   </div>
 </template>
@@ -47,7 +51,7 @@
 // import About from './components/about.vue'
 
 export default {
-  name: 'App',
+  name: "App",
   // components: {
   //   Home,
   //   MockRandom,
@@ -57,12 +61,12 @@ export default {
   //   Router,
   //   About
   // },
-  data () {
+  data() {
     return {
-      current: 'router'
-    }
+      current: "router"
+    };
   }
-}
+};
 // 组件的创建
 // 1. 创建一个.vue后缀的一个文件
 // 2.导入组件：import自定义组建的名字 from ‘组建的路径’
@@ -81,8 +85,7 @@ export default {
   margin-top: 60px;
 }
 .active,
-.router-link-exact-active{
-  color:red;
+.router-link-exact-active {
+  color: red;
 }
-
 </style>
