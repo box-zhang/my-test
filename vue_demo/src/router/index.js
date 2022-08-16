@@ -2,7 +2,7 @@
  * @Author: boxZhang
  * @Date: 2022-08-15 10:09:20
  * @LastEditors: boxZhang
- * @LastEditTime: 2022-08-15 17:00:43
+ * @LastEditTime: 2022-08-16 10:59:32
  * @Description: 好好做人，谨慎敲码
  * @FilePath: \workspace\test-boxZ\my-test\vue_demo\src\router\index.js
  */
@@ -40,6 +40,14 @@ const routes = [{
   path: '/query',
   name: 'query',
   component: () => import('@/views/query.vue')
+}, {
+  path: '/movieList',
+  name: 'movieList',
+  component: () => import('@/views/movie.vue')
+}, {
+  path: '/detail',
+  name: 'detail',
+  component: () => import('@/views/movieDetail.vue')
 }]
 export default new Router({
   routes: routes

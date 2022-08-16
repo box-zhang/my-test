@@ -37,6 +37,7 @@
     <router-link to="/aboutView">aboutView</router-link> |
     <router-link to="/homeView">homeView</router-link> |
     <router-link to="/query">query</router-link>
+    <router-link to="/movieList">movieList</router-link>
     <router-view></router-view>
   </div>
 </template>
