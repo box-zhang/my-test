@@ -2,7 +2,7 @@
  * @Author: boxZhang
  * @Date: 2022-08-08 10:15:42
  * @LastEditors: boxZhang
- * @LastEditTime: 2022-08-15 17:03:38
+ * @LastEditTime: 2022-08-16 16:57:45
  * @Description: 好好做人，谨慎敲码
  * @FilePath: \workspace\test-boxZ\my-test\vue_demo\src\App.vue
 -->
@@ -36,8 +36,11 @@
     <hr />
     <router-link to="/aboutView">aboutView</router-link> |
     <router-link to="/homeView">homeView</router-link> |
-    <router-link to="/query">query</router-link>
-    <router-link to="/movieList">movieList</router-link>
+    <router-link to="/query">query</router-link> |
+    <router-link to="/movieList">movieList</router-link> |
+    <hr />
+    <router-link to="/get">get请求</router-link>
+    <router-link to="/post">post请求</router-link>
     <router-view></router-view>
   </div>
 </template>

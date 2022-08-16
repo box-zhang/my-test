@@ -2,7 +2,7 @@
  * @Author: boxZhang
  * @Date: 2022-08-15 10:09:20
  * @LastEditors: boxZhang
- * @LastEditTime: 2022-08-16 10:59:32
+ * @LastEditTime: 2022-08-16 16:59:07
  * @Description: 好好做人，谨慎敲码
  * @FilePath: \workspace\test-boxZ\my-test\vue_demo\src\router\index.js
  */
@@ -48,6 +48,14 @@ const routes = [{
   path: '/detail',
   name: 'detail',
   component: () => import('@/views/movieDetail.vue')
+}, {
+  path: '/get',
+  name: 'get',
+  component: () => import('@/components/get.vue')
+}, {
+  path: '/post',
+  name: 'post',
+  component: () => import('@/components/post.vue')
 }]
 export default new Router({
   routes: routes
