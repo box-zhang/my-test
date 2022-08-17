@@ -13,7 +13,11 @@
   "dependencies": {
     "mockjs": "^1.1.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "axios": "^0.27.2",
+    "jquery": "^3.6.0",
+    "qs": "^6.11.0",
+    "vant": "^2.12.48"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -60,7 +64,8 @@
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "unplugin-vue-components": "^0.22.4"
   },
   "engines": {
     "node": ">= 6.0.0",
