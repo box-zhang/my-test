@@ -2,7 +2,7 @@
  * @Author: boxZhang
  * @Date: 2022-08-16 10:33:32
  * @LastEditors: boxZhang
- * @LastEditTime: 2022-08-16 15:46:25
+ * @LastEditTime: 2022-08-17 11:03:08
  * @Description: 好好做人，谨慎敲码
  * @FilePath: \workspace\test-boxZ\my-test\vue_demo\src\views\movie.vue
 -->
@@ -46,38 +46,38 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios'
 export default {
-  data() {
+  data () {
     return {
       movieList: []
-    };
+    }
   },
   methods: {
-    getMovieList() {
-      axios.get("http://bufantec.com/api/douban/movie/top250").then(res => {
+    getMovieList () {
+      axios.get('douban/movie/top250').then(res => {
         // console.log(res.data);
-        const { data: message } = res.data;
+        const { data: message } = res.data
         // console.log(message.list);
-        this.movieList = message.list;
-      });
+        this.movieList = message.list
+      })
     },
     // toDetail()点击每一行，跳转到详情页
-    toDetail(item) {
-      console.log(item);
-      console.log(this.$router);
+    toDetail (item) {
+      console.log(item)
+      console.log(this.$router)
       // this.$router.push("/detail");
-      this.$router.push({ path: "/detail", query: { id: item.mId } });
+      this.$router.push({ path: '/detail', query: { id: item.mId } })
       // path 和params不能一起使用
       // this.$router.push({ path: "/detail", params: { id: item.mId } });
       // this.$router.push({ name: "detail", query: { id: item.mId } });
       // this.$router.push({ name: "detail", params: { id: item.mId } });
     }
   },
-  mounted() {
-    this.getMovieList();
+  mounted () {
+    this.getMovieList()
   }
-};
+}
 </script>
 
 <style></style>
